@@ -29,7 +29,7 @@ public class SecondActivity extends AppCompatActivity {
         tvYear = (TextView) findViewById(R.id.tvOof);
 
         Intent i = getIntent();
-        String year = i.getStringExtra("year");
+        String year = i.getStringExtra(Intent.EXTRA_TEXT);
         tvYear.setText(year);
 
 // Create a few food objects in Food array
@@ -42,17 +42,17 @@ public class SecondActivity extends AppCompatActivity {
         //  each row and the food String array together
         aa = new ModuleAdapter(this, R.layout.row, module);
         lv.setAdapter(aa);
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Module selectedFood = module.get(position);
-
-                Toast.makeText(SecondActivity.this, selectedFood.getName()
-                                + " Star: " + selectedFood.isProg(),
-                        Toast.LENGTH_LONG).show();
-            }
-        });
+//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Module selectedModule = module.get(position);
+//
+//                Toast.makeText(SecondActivity.this, selectedModule.getName()
+//                                + " Star: " + selectedModule.isProg(),
+//                        Toast.LENGTH_LONG).show();
+//            }
+//        });
 
     }
 
