@@ -11,20 +11,21 @@ public class FirstActivity extends AppCompatActivity {
 
     ListView lv;
     ArrayList<String> al;
-    ArrayAdapter<String> aa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        lv = (ListView) this.findViewById(R.id.lvYear);
 
         al = new ArrayList<String>();
         al.add("Year 1");
+        al.add("Year 2");
+        al.add("Year 3");
 
-
-
-
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.row2,al);
+        lv.setAdapter(adapter);
 
     }
 }
