@@ -26,7 +26,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         lv = (ListView) this.findViewById(R.id.lvModules);
-        tvYear = (TextView) findViewById(R.id.tvYear);
+        tvYear = (TextView) findViewById(R.id.tvOof);
 
         Intent i = getIntent();
         String year = i.getStringExtra("year");
